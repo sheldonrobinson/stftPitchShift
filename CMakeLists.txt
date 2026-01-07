@@ -10,7 +10,7 @@ option(WASM  "Enable web assembly build" OFF)
 option(FASTMATH "Enable fast math"  OFF)
 option(FASTATAN "Enable fast atan2" OFF)
 
-set(STFTPITCHSHIFT_BUILD_SHARED "Enable building StftPitchShift shared library" ON)
+option(STFTPITCHSHIFT_BUILD_SHARED "Enable building StftPitchShift shared library" ON)
 
 if(MSVC)
 
