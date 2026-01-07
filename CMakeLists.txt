@@ -10,6 +10,8 @@ option(WASM  "Enable web assembly build" OFF)
 option(FASTMATH "Enable fast math"  OFF)
 option(FASTATAN "Enable fast atan2" OFF)
 
+set(STFTPITCHSHIFT_BUILD_SHARED "Enable building StftPitchShift shared library" ON)
+
 if(MSVC)
 
   # optionally treat warnings as errors
@@ -25,7 +27,7 @@ else()
 
 endif()
 
-if(MSVC AND BUILD_SHARED_LIBS)
+if(MSVC AND STFTPITCHSHIFT_BUILD_SHARED)
 
   # automatically create module definition files on Windows
   set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
