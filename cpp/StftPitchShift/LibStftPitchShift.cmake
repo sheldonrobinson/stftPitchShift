@@ -4,7 +4,11 @@ project(stftpitchshift)
 
 include(GNUInstallDirs)
 
-add_library(${PROJECT_NAME})
+if(STFTPITCHSHIFT_BUILD_SHARED)
+add_library(${PROJECT_NAME} SHARED)
+else()
+add_library(${PROJECT_NAME} STATIC)
+endif()
 
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/VERSION" VERSION)
 string(STRIP "${VERSION}" VERSION)
